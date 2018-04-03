@@ -1,0 +1,19 @@
+extends layout
+
+block content
+   h1 Rana is #{title}
+   form(method='POST', action='/articles/add')
+          //- div.form-group
+          //-   label(for='name') Name:
+          //-   input#name.form-control(type='text',name='name')
+          div.form-group
+            label Title:
+            input.form-control(type='text',name='title')
+          //- div.form-group
+          //-   label Author:
+          //-   input.form-control(type='text',name='author')
+          div.form-group
+            label Body:
+            textarea.form-control(name='body')
+          button.btn.btn-primary(type='submit') Sign up
+

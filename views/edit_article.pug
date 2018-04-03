@@ -1,0 +1,19 @@
+extends layout
+
+block content
+   h1 Rana is #{title}
+   form(method='POST', action='/articles/edit/'+article._id)
+          //- div.form-group
+           //- label(for='name') Name:
+           //- input#name.form-control(type='text',name='name', value=article.name)
+          div.form-group
+            label Title:
+            input.form-control(type='text',name='title', value=article.title)
+          div.form-group
+            label Author:
+            input.form-control(type='text',name='author', value=article.author)
+          div.form-group
+            label Body:
+            textarea.form-control(name='body')= article.body
+          button.btn.btn-primary(type='submit') Edit Article
+
